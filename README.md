@@ -1,4 +1,11 @@
-<h1 align="center">🏦 Bank Root</h1>
+
+
+<span align="center">
+<img src="./src/assets/img/BankRootLogo.png" alt="logo bankRoot" style="display: block; margin: auto; width: 150px">
+</span>
+
+
+<h1 align="center">Bank Root</h1>
 
 <br>
 
