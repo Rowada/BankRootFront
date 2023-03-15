@@ -7,11 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  isMenuOpen = false;
-
-  toggleMenu() {
-    this.isMenuOpen =!this.isMenuOpen;
+  showMenu = false;
+  toggleNavbar(){
+    this.showMenu = !this.showMenu;
   }
-
-
 }

@@ -1,21 +1,31 @@
-<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-  <!-- Logo -->
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <img class="h-8 w-8" src="mon-logo.png" alt="Mon logo">
-    <span class="font-semibold text-xl tracking-tight ml-2">Mon site</span>
-  </div>
-  <!-- Bouton Menu -->
-  <div class="block lg:hidden">
-    <button id="menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" (click)="toggleMenu()">
-      <svg class="h-4 w-4 fill-current mr-2" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-      </svg>
-      <span>Menu</span>
-    </button>
-  </div>
-  <!-- Menu -->
-  <div class="hidden lg:block" [ngClass]="{'hidden': !isMenuOpen}">
-    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0 mr-2">Se connecter</a>
-    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">S'inscrire</a>
+<nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-black mb-3">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+      <a class="text-xl  leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white" href="#">
+        BankRoot
+      </a>
+      <button class="text-white  cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" (click)="toggleNavbar()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+      <ul class="flex flex-col lg:flex-row list-none ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xl  leading-snug text-white hover:opacity-75" href="#">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xl  leading-snug text-white hover:opacity-75" href="#">
+            Log in
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center text-xl   leading-snug text-white hover:opacity-75" href="#">
+            Sign Up
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
