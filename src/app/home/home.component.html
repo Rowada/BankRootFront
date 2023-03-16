@@ -1,31 +1,32 @@
-<nav class="relative flex flex-wrap items-center justify-between px-2 py-3  mb-3">
-  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-      <img src="assets/img/BankRootLogo.png" alt="logo bankRoot" class="w-20">
-      <button class="text-black cursor-pointer text-xl leading-none px-3 py-1 block lg:hidden outline-none focus:outline-none" type="button" (click)="toggleNavbar()">
-        <i class="fas fa-bars text-[2rem]"></i>
-      </button>
-    </div>
-    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
-      <ul class="flex flex-col lg:flex-row list-none ml-auto">
-        <li class="nav-item px-3">
-          <a class="px-3 py-2 flex items-center text-xl font-light leading-snug text-black  hover:opacity-75" href="#">
-            Home
-          </a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="px-3 py-2 flex items-center text-xl font-light leading-snug text-black hover:opacity-75" href="#">
-            Log in
-          </a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="px-8 py-2 flex items-center text-xl bg-btn rounded-md font-light leading-snug text-white hover:opacity-75" href="#">
-            Sign Up
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!--<nav class="relative flex flex-wrap items-center justify-between px-2 py-3  mb-3">-->
+<!--  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">-->
+<!--    <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">-->
+<!--      <img src="assets/img/BankRootLogo.png" alt="logo bankRoot" class="w-24">-->
+<!--      <button class="text-black cursor-pointer text-xl leading-none px-3 py-1 block lg:hidden outline-none focus:outline-none" type="button" (click)="toggleNavbar()">-->
+<!--        <i class="fas fa-bars text-[2rem]"></i>-->
+<!--      </button>-->
+<!--    </div>-->
+<!--    <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">-->
+<!--      <ul class="flex flex-col lg:flex-row list-none ml-auto">-->
+<!--        <li class="nav-item px-3">-->
+<!--          <a class="px-3 py-2 flex items-center text-xl font-light leading-snug text-black  hover:opacity-75" href="#">-->
+<!--            Home-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="nav-item px-3">-->
+<!--          <a class="px-3 py-2 flex items-center text-xl font-light leading-snug text-black hover:opacity-75" href="#">-->
+<!--            Log in-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="nav-item px-3">-->
+<!--          <a class="px-8 py-2 flex items-center text-xl bg-btn rounded-md font-light leading-snug text-white hover:opacity-75" href="#">-->
+<!--            Sign Up-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
 
 
+<app-navbar></app-navbar>
