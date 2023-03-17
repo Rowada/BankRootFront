@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from "../api.service";
 
 @Component({
   selector: 'app-profile',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
+  data: any;
+constructor(private apiService: ApiService) { }
+
+ngOnInit() {
+  this.apiService.getUsers()
+    .subscribe((data)=>{
+      console.log(data);
+      this.data = data;
+    })
+}
 
 }
