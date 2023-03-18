@@ -14,7 +14,7 @@ export class ApiService {
   };
 
   getUsers() {
-    return this.http.get('user/1', this.httpOptions);
+    return this.http.get('/user', this.httpOptions);
   }
 
   signUp(user: any) {

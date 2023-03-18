@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     AboutComponent,
     ProfileComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
