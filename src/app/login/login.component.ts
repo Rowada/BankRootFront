@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { StorageService } from '../storage.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private storageService: StorageService
+    private storageService: StorageService,
+
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -35,18 +37,12 @@ export class LoginComponent implements OnInit {
       next: (data) => {
         this.storageService.saveUser(data);
 
-        this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.reloadPage();
+        return this.router.navigateByUrl('/profile');
       },
       error: (err) => {
         this.errorMessage = err.error.message;
-        this.isLoginFailed = true;
       },
     });
-  }
-
-  reloadPage(): void {
-    window.location.reload();
   }
 }

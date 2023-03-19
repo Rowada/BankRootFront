@@ -25,7 +25,7 @@ export class SignupComponent {
       password: this.form.value.password,
     };
     this.api.signUp(JSON.stringify(user)).subscribe(() => {
-      this.router.navigateByUrl('/login');
+      return this.router.navigateByUrl('/login');
     });
   }
 }
