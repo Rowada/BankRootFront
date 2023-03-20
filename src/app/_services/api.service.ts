@@ -49,9 +49,9 @@ export class ApiService {
     return this.http.post('/auth/register', user, this.httpOptions);
   }
 
-  login(mail: string, password: string): Observable<any> {
-    return this.http.post('/auth/login', { mail, password });
-  }
+  // login(mail: string, password: string): Observable<any> {
+  //   return this.http.post('/auth/login', { mail, password });
+  // }
 
   getUserById(id: number) {
     return this.http.get(`user/${id}`, this.httpOptions);

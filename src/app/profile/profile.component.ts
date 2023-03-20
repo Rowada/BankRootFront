@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { StorageService } from '../storage.service';
+import { ApiService } from '../_services/api.service';
+import { StorageService } from '../_services/storage.service';
 
 @Component({
   selector: 'app-profile',

@@ -1,42 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { StorageService } from '../storage.service';
+import { AuthService } from '../_services/auth.service';
+import { StorageService } from '../_services/storage.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  form: any = {
-    mail: null,
-    password: null,
-  };
-
   isLoggedIn = false;
-  isLoginFailed = false;
   errorMessage = '';
 
   constructor(
-    private apiService: ApiService,
+    private authService: AuthService,
     private storageService: StorageService,
 
     private router: Router
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): any {
     if (this.storageService.isLoggedIn()) {
       this.isLoggedIn = true;
     }
   }
 
+  form = new FormGroup({
+    mail: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  });
   onSubmit(): void {
-    const { mail, password } = this.form;
+    const { mail, password } = this.form.value;
 
-    this.apiService.login(mail, password).subscribe({
+    this.authService.login(mail || '', password || '').subscribe({
       next: (data) => {
         this.storageService.saveUser(data);
-
         this.isLoggedIn = true;
         return this.router.navigateByUrl('/profile');
       },

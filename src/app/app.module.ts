@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { httpInterceptorProviders } from '../helpers/http.interceptor';
+import { httpInterceptorProviders } from './helpers/http.interceptor';
 
 @NgModule({
   declarations: [

@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
-
+<!--*ngIf="!isLoggedIn"-->
 <section>
   <div class="container flex items-center justify-center px-6 mx-auto h-[70vh]">
     <form
-      *ngIf="!isLoggedIn"
+      [formGroup]="form"
       name="form"
       (ngSubmit)="f.form.valid && onSubmit()"
       #f="ngForm"
@@ -39,10 +39,8 @@
         <input
           type="email"
           name="mail"
-          [(ngModel)]="form.mail"
+          formControlName="mail"
           required
-          #mail="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && mail.errors }"
           class="block w-full py-3 text-grey bg-white border rounded-md px-11 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Email address"
         />
@@ -69,10 +67,8 @@
         <input
           type="password"
           name="password"
-          [(ngModel)]="form.password"
+          formControlName="password"
           required
-          #password="ngModel"
-          [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
           class="block w-full px-10 py-3 text-grey bg-white border rounded-md focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
           placeholder="Password"
         />
