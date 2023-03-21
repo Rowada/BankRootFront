@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     AboutComponent,
     ProfileComponent,
     DashboardComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

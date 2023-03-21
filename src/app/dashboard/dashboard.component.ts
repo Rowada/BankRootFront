@@ -6,7 +6,7 @@ import { ApiService } from '../_services/api.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   data: any;
   constructor(private apiService: ApiService) {}
 

@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
     this.apiService.getProfile().subscribe((userData) => {
       this.apiService.getUserById(Object(userData)['sub']).subscribe((data) => {
         this.data = data;
+        console.log(userData);
       });
     });
   }
