@@ -67,7 +67,7 @@
         </li>
         <li class="nav-item px-3" *ngIf="!isLoggedIn">
           <a
-            class="px-8 py-2 flex items-center text-xl bg-btn rounded-md font-light leading-snug text-white hover:opacity-75"
+            class="px-8 py-2 flex items-center text-xl bg-btn rounded-md font-light leading-snug text-white hover:opacity-75 hover:scale-110 duration-75"
             routerLink="/signup"
           >
             Sign Up
@@ -75,7 +75,7 @@
         </li>
         <li class="nav-item px-3" *ngIf="isLoggedIn">
           <a
-            class="px-8 py-2 flex items-center text-xl bg-btn cursor-pointer rounded-md font-light leading-snug text-white hover:opacity-75"
+            class="px-8 py-2 flex items-center text-xl bg-btn cursor-pointer rounded-md font-light leading-snug text-white hover:opacity-75 hover:scale-110 duration-75"
             (click)="logout()"
           >
             Log out
