@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../_services/storage.service';
 import { Router, RouterLink } from '@angular/router';
-import { ComponentsModule } from '../components.module';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -27,8 +26,4 @@ export class NavbarComponent implements OnInit {
   toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
-
-  // reloadPage(): void {
-  //   window.location.reload();
-  // }
 }
