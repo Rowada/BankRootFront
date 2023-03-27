@@ -1,0 +1,3 @@
+.tr {
+  @apply bg-home-bg text-black capitalize text-sm leading-normal;
+}
